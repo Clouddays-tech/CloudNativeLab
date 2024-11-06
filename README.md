@@ -25,8 +25,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out "${CERT_NAME}.crt" \
 openssl pkcs12 -export -in "$CERT_NAME.crt" -inkey "$CERT_NAME.key" -out "$CERT_NAME.pfx" -passout pass:
 ```
 
+### Create Azure Resources APP Gateway, Keyvault, VMSS and fetch certificate from key vault
 ```
-
 location=westus
 rgname=RG001-westus 
 vnetname=VNet001-westus 
