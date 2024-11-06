@@ -175,3 +175,15 @@ az vmss extension set \
  --resource-group $rgname --vmss-name vmss \
  --settings '{ "fileUris": ["https://raw.githubusercontent.com/ConnecttheCloud/AWSTerraformLab1/refs/heads/main/httpd-ssl.sh"], "commandToExecute": "./httpd-ssl.sh" }'
  ```
+
+
+Here is the web portal and loadbalancing from VMSS VM:
+
+![Web1](./images/web1-image.jpg)
+
+
+![Web2](./images/web2-image.jpg)
+
+Below are created Azure resources:
+
+![Azure Resoruces](./images/azureresources.jpg)
