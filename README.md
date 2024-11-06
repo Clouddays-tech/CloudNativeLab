@@ -176,6 +176,7 @@ az vmss extension set \
  --settings '{ "fileUris": ["https://raw.githubusercontent.com/ConnecttheCloud/AWSTerraformLab1/refs/heads/main/httpd-ssl.sh"], "commandToExecute": "./httpd-ssl.sh" }'
  ```
 
+It's time to browse the web page.  You can bind APPGateway Frontend IP  to DNS A record and browse the portal. In this lab TLS certificate is configured for SAN name test.clouddays.info.
 
 Here is the web portal and loadbalancing from VMSS VM:
 
@@ -184,6 +185,6 @@ Here is the web portal and loadbalancing from VMSS VM:
 
 ![Web2](./APPGW-VMSS-EndtoEnd-TLS-Termination/images/web2-image.jpg)
 
-Below are created Azure resources:
+The following Azure resources are created with Azcli:
 
 ![Azure Resoruces](./APPGW-VMSS-EndtoEnd-TLS-Termination/images/azureresources.jpg)
