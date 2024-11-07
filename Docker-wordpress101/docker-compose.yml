@@ -32,10 +32,10 @@ services:
     restart: always
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
-      #MYSQL_ROOT_PASSWORD: fr1edEgg$
+      #MYSQL_ROOT_PASSWORD: TESTINGPWD
       MYSQL_DATABASE: clouddays_DB
-      MYSQL_USER: clouddays
-      MYSQL_PASSWORD: clouddays.info
+      MYSQL_USER: $SQLUSER
+      MYSQL_PASSWORD: $SQLPASSWORD
   ##############################################################################################################################
   wordpress:
     depends_on:
@@ -47,8 +47,8 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: 'db:3306'
-      WORDPRESS_DB_USER: clouddays
-      WORDPRESS_DB_PASSWORD: clouddays.info
+      WORDPRESS_DB_USER: $SQLUSER
+      WORDPRESS_DB_PASSWORD: $SQLPASSWORD
       WORDPRESS_DB_NAME: clouddays_DB
 volumes:
   db_data: {}

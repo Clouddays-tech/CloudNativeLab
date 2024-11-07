@@ -1,4 +1,17 @@
 #!/bin/bash
+#!/bin/bash
+
+# Prompt the user for the SQL username and password
+read -p "Enter SQL username: " SQLUSER
+read -s -p "Enter SQL password: " SQLPASSWORD
+echo # Adds a new line after the password prompt
+
+# Export the variables so they can be accessed by other scripts or commands
+export SQLUSER="$SQLUSER"
+export SQLPASSWORD="$SQLPASSWORD"
+
+echo "SQLUSER and SQL password is set."
+
 
 if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
